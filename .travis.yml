@@ -33,4 +33,4 @@ deploy:
   bucket_name: "elasticbeanstalk-us-east-1-754415205510"
   bucket_path: "hw1/"
   on:
-    branch: main
+    repo: Soester10/swe1-app

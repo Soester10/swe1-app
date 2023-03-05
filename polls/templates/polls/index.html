@@ -2,6 +2,7 @@
     <ul>
     {% for question in latest_question_list %}
         <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        <li>This is a <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">test</a></li>
     {% endfor %}
     </ul>
 {% else %}
