@@ -11,7 +11,7 @@ before_script:
   - python manage.py migrate
 
 after_script:
-  - coveralls
+  - coveralls --service=github
 
 script:
   # Run Black formatter
@@ -34,3 +34,4 @@ deploy:
   bucket_path: "hw1/"
   on:
     repo: Soester10/swe1-app
+    branch: main
