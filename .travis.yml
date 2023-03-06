@@ -10,8 +10,8 @@ install:
 before_script:
   - python manage.py migrate
 
-after_script:
-    run: coveralls --service=github
+# after_script:
+#     run: coveralls --service=github
 
 script:
   # Run Black formatter
@@ -35,3 +35,5 @@ deploy:
   on:
     repo: Soester10/swe1-app
     branch: main
+
+run: coveralls --service=github
