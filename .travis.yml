@@ -36,4 +36,5 @@ deploy:
     repo: Soester10/swe1-app
     branch: main
 
-run: coveralls --service=github
+script:
+  run: coveralls --service=github
