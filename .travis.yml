@@ -10,6 +10,12 @@ install:
 before_script:
   - python manage.py migrate
 
+after_script:
+  - name: Coveralls
+    env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    run: coveralls --service=github
+
 script:
   # Run Black formatter
   - black --check .
@@ -32,10 +38,3 @@ deploy:
   on:
     repo: Soester10/swe1-app
     branch: main
-
-
-
-name: Coveralls
-env:
-GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-run: coveralls --service=github
