@@ -11,6 +11,7 @@ before_script:
   - python manage.py migrate
 
 after_script:
+    git checkout -
     coveralls
 
 script:
