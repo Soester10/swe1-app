@@ -13,7 +13,7 @@ before_script:
 after_script:
   name: Coveralls
   env:
-  GITHUB_TOKEN: $GITHUB_TOKEN_C
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   run: coveralls --service=github
 
 script:
