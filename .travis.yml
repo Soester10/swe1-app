@@ -11,9 +11,6 @@ before_script:
   - python manage.py migrate
 
 after_script:
-  - name: Coveralls
-    env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     run: coveralls --service=github
 
 script:
