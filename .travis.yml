@@ -11,7 +11,10 @@ before_script:
   - python manage.py migrate
 
 after_script:
-  - coveralls --service=github
+  name: Coveralls
+  env:
+  GITHUB_TOKEN: $GITHUB_TOKEN_C
+  run: coveralls --service=github
 
 script:
   # Run Black formatter
