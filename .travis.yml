@@ -11,8 +11,8 @@ before_script:
   - python manage.py migrate
 
 after_script:
-    git checkout -
-    coveralls
+  - git checkout -
+  - coveralls
 
 script:
   # Run Black formatter
